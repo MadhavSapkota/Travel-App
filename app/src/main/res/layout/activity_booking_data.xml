@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--	xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--	xmlns:tools="http://schemas.android.com/tools"-->
+<!--	android:id="@+id/bookingData"-->
+<!--	android:layout_width="wrap_content"-->
+<!--	android:layout_height="wrap_content"-->
+<!--	android:scrollbars="vertical">-->
+
+
+	<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/bookingData"
+		android:scrollbars="vertical">
+
+		<ImageView
+			android:id="@+id/btnGhandruk"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:src="@drawable/dashboard_grid_item1"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintHorizontal_bias="0.142"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent"
+			app:layout_constraintVertical_bias="0.406" />
+
+		<ImageView
+			android:id="@+id/imageView5"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:src="@drawable/dashboard_grid_item_rectanglebox"
+			android:layout_marginTop="@dimen/_65sdp"
+			app:layout_constraintTop_toTopOf="@+id/btnGhandruk"
+			app:layout_constraintVertical_bias="1.0" />
+
+		<TextView
+			android:id="@+id/textViewGrandrukName"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:fontFamily="@font/poppins_regular"
+			android:text="@string/text_ghandruk"
+			android:textColor="#FFFFFF"
+			android:textSize="16sp"
+			android:layout_marginTop="@dimen/_65sdp"
+			android:layout_marginStart="@dimen/_6sdp"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintHorizontal_bias="0.117"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent"
+			app:layout_constraintVertical_bias="0.763" />
+
+		<TextView
+			android:id="@+id/tvGrandrukTripDetails"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:fontFamily="@font/poppins_regular"
+			android:text="@string/text_ghandruk_details"
+			android:textColor="#FFFFFF"
+			android:textSize="12sp"
+			android:layout_marginStart="@dimen/_6sdp"
+			android:layout_marginTop="@dimen/_87sdp"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintHorizontal_bias="0.228"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent"
+			app:layout_constraintVertical_bias="0.943" />
+
+
+	</RelativeLayout>
+<!--</LinearLayout>-->

@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical">
+	
+	<!--FullName EdittextView -->
+	<EditText
+		android:id="@+id/et_full_name"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="@dimen/_16sdp"
+		android:layout_marginEnd="@dimen/_16sdp"
+		style="@style/Edittext"
+		android:textAlignment="viewStart"
+		android:drawableStart="@drawable/ic_full_name"
+		android:drawablePadding="@dimen/activity_start_margin"
+		android:fontFamily="@font/poppins_regular"
+		android:hint="@string/prompt_full_name"
+		android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+		android:maxLength="50"
+		android:imeOptions="actionNext"
+		android:inputType="textPersonName"
+		android:selectAllOnFocus="true"
+		android:singleLine="true"
+		android:textColorHint="#C0C0C0"
+		android:textSize="14dp" />
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="@dimen/_16sdp"
+		android:imeOptions="actionNext"
+		android:layout_marginTop="@dimen/_16sdp"
+		android:layout_marginRight="@dimen/_16sdp"
+		android:orientation="vertical">
+		<!--Email EdittextView -->
+		<EditText
+			android:id="@+id/et_email"
+			style="@style/Edittext"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="@dimen/_4sdp"
+			android:drawableStart="@drawable/ic_icon_user"
+			android:drawablePadding="@dimen/activity_start_margin"
+			android:gravity="center_vertical"
+			android:hint="@string/prompt_email"
+			android:maxLength="45"
+			android:imeOptions="actionNext"
+			android:inputType="textEmailAddress"
+			android:selectAllOnFocus="true"
+			android:textColorHint="#C0C0C0"
+			android:textSize="14dp" />
+		<!--Spinner for Country Option-->
+		
+		<Spinner
+			android:id="@+id/et_country_name"
+			style="@style/SpinnerTheme"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="30dp"
+			android:focusable="false"
+			android:paddingLeft="@dimen/_40sdp" />
+		
+		
+		
+		<!-- Phone Number EditTextView-->
+		<EditText
+			android:id="@+id/et_phone_details"
+			style="@style/Edittext"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="@dimen/_20sdp"
+			android:drawableStart="@drawable/ic_phone"
+			android:drawablePadding="@dimen/activity_start_margin"
+			android:hint="@string/prompt_phone"
+			android:maxLength="10"
+			android:inputType="phone"
+			android:imeOptions="actionNext"
+			android:selectAllOnFocus="true"
+			android:textColorHint="#C0C0C0"
+			android:textSize="14dp" />
+
+		<!--Date of birth calendar alert dialog popped out -->
+
+		<EditText
+			android:id="@+id/et_date_of_birth"
+			style="@style/Edittext"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="@dimen/_20sdp"
+			android:drawableStart="@drawable/ic_dob"
+			android:drawablePadding="@dimen/activity_start_margin"
+			android:fontFamily="@font/poppins_regular"
+			android:inputType="date"
+			android:focusable="false"
+			android:hint="@string/prompt_dob"
+			android:textColorHint="#C0C0C0"
+			android:textSize="14dp"/>
+		
+		<!--EditTextView for password-->
+		<EditText
+			android:id="@+id/et_password"
+			style="@style/Edittext"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="@dimen/_20sdp"
+			android:drawableStart="@drawable/ic_icon_password"
+			android:drawablePadding="@dimen/activity_start_margin"
+			android:gravity="center_vertical"
+			android:hint="@string/prompt_password"
+			android:maxLength="16"
+			android:imeOptions="actionNext"
+			android:inputType="textPassword"
+			android:selectAllOnFocus="true"
+			android:textColorHint="#C0C0C0"
+			android:textSize="14dp"/>
+		<!--EditTextView for confirmpassword-->
+		<EditText
+			android:id="@+id/et_confirm_password"
+			style="@style/Edittext"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="@dimen/_20sdp"
+			android:imeOptions="actionNext"
+			android:drawableStart="@drawable/ic_icon_password"
+			android:drawablePadding="@dimen/activity_start_margin"
+			android:gravity="center_vertical"
+			android:hint="@string/prompt_confirm_password"
+			android:inputType="textPassword"
+			android:maxLength="16"
+			android:selectAllOnFocus="true"
+			android:textColorHint="#C0C0C0"
+			android:textSize="14dp" />
+	</LinearLayout>
+
+
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="horizontal">
+		
+		<ImageView
+			android:id="@+id/imageView3"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="bottom"
+			android:background="@drawable/mask_group" />
+
+
+		<androidx.constraintlayout.widget.ConstraintLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent">
+
+
+			<ImageView
+				android:id="@+id/btn_signUp"
+				android:layout_width="@dimen/_105sdp"
+				android:layout_height="@dimen/_32sdp"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toTopOf="parent"
+				app:layout_constraintVertical_bias="0.804"
+				app:srcCompat="@drawable/gradient_drawable" />
+
+
+			<TextView
+				android:id="@+id/textView4"
+				style="@style/normal_font"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:gravity="center_horizontal|center_vertical"
+				android:text="@string/sign_up"
+				android:textColor="@color/colorPrimary"
+				android:layout_marginStart="@dimen/_20sdp"
+				app:layout_constraintBottom_toBottomOf="@+id/btn_signUp"
+				app:layout_constraintEnd_toStartOf="@+id/imageView13"
+				app:layout_constraintHorizontal_bias="0.6"
+				app:layout_constraintStart_toStartOf="@+id/btn_signUp"
+				app:layout_constraintTop_toTopOf="@+id/btn_signUp"
+				app:layout_constraintVertical_bias="0.59" />
+
+			<ImageView
+				android:id="@+id/imageView13"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginEnd="8dp"
+				android:gravity="center_horizontal|center_vertical"
+				app:layout_constraintBottom_toBottomOf="@+id/btn_signUp"
+				app:layout_constraintEnd_toEndOf="@+id/btn_signUp"
+				app:layout_constraintStart_toEndOf="@id/textView4"
+				app:layout_constraintTop_toTopOf="@+id/btn_signUp"
+				app:srcCompat="@drawable/ic_baseline_arrow_forward_24"
+				app:layout_constraintVertical_bias="0.59"/>
+
+		</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+	</LinearLayout>
+</LinearLayout>
+
+
+
+

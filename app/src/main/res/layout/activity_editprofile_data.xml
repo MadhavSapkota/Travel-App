@@ -1,0 +1,292 @@
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:overScrollMode="never">
+	
+	
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical">
+		
+		<androidx.constraintlayout.widget.ConstraintLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content">
+			
+			<Button
+				android:id="@+id/button_arrow"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="@dimen/activity_start_margin"
+				android:layout_marginTop="@dimen/activity_top_margin"
+				android:layout_marginEnd="@dimen/activity_end_margin"
+				android:background="@null"
+				android:clickable="true"
+				android:drawableStart="@drawable/ic_arrow"
+				android:gravity="start|center_vertical"
+				android:paddingRight="@dimen/activity_start_margin"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintHorizontal_bias="0.036"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toTopOf="parent"
+				app:layout_constraintVertical_bias="0.0" />
+			
+			
+			<ImageView
+				android:id="@+id/imageView2"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:contentDescription="@string/name_app"
+				android:scaleType="centerCrop"
+				android:adjustViewBounds="true"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintHorizontal_bias="1.0"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toTopOf="parent"
+				app:layout_constraintVertical_bias="0.0"
+				app:srcCompat="@drawable/login_background" />
+			
+			
+			<TextView
+				android:id="@+id/tv_title_name"
+				style="@style/font_title_profile"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginEnd="@dimen/activity_end_margin"
+				android:gravity="start|center_vertical"
+				android:text="@string/profile_edit_profile"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintHorizontal_bias="0.447"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toTopOf="parent"
+				app:layout_constraintVertical_bias="0.164" />
+			
+			<androidx.constraintlayout.widget.Guideline
+				android:id="@+id/guideline7"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:orientation="vertical"
+				app:layout_constraintGuide_begin="20dp" />
+			
+			
+			<com.google.android.material.imageview.ShapeableImageView
+				android:id="@+id/shapeableImageView"
+				android:layout_width="140dp"
+				android:layout_height="140dp"
+				android:layout_marginStart="@dimen/activity_start_margin"
+				android:layout_marginEnd="@dimen/activity_start_margin"
+				android:src="@drawable/eclipse"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintHorizontal_bias="0.515"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toTopOf="parent"
+				app:layout_constraintVertical_bias="0.857"
+				app:shapeAppearanceOverlay="@style/circleImageView" />
+			
+			<com.google.android.material.imageview.ShapeableImageView
+				android:id="@+id/imageView"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="30dp"
+				android:layout_marginEnd="@dimen/activity_end_margin"
+				app:layout_anchorGravity="bottom|left|start"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintHorizontal_bias="0.685"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toTopOf="parent"
+				app:layout_constraintVertical_bias="0.908"
+				app:srcCompat="@drawable/eclipse_profile" />
+			
+			<ImageView
+				android:id="@+id/imageView8"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginEnd="@dimen/activity_end_margin"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintHorizontal_bias="0.672"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toTopOf="parent"
+				app:layout_constraintVertical_bias="0.866"
+				app:srcCompat="@drawable/icon_camera" />
+			
+			
+			<!-- ViewItinerary text View -->
+		
+		
+		</androidx.constraintlayout.widget.ConstraintLayout>
+		
+		<EditText
+			android:id="@+id/et_full_name"
+			style="@style/Widget.AppCompat.AutoCompleteTextView"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="@dimen/activity_start_margin"
+			android:layout_marginTop="@dimen/activity_top_margin"
+			android:layout_marginEnd="@dimen/activity_end_margin"
+			android:layout_marginBottom="@dimen/activity_bottom_margin"
+			android:background="@drawable/rectangle_pedittext"
+			android:drawableStart="@drawable/icon_personame"
+			android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+			android:drawablePadding="20dp"
+			android:fontFamily="@font/poppins_regular"
+			android:gravity="center_vertical"
+			android:hint="@string/edit_profile_username_editTextview"
+			android:maxLength="40"
+			android:inputType="textPersonName"
+			android:paddingLeft="@dimen/activity_start_padding"
+			android:selectAllOnFocus="true"
+			android:textColorHint="#C0C0C0"
+			android:textSize="14sp"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintHorizontal_bias="1.0"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent"
+			app:layout_constraintVertical_bias="0.382" />
+		
+		<EditText
+			android:id="@+id/et_email_address"
+			style="@style/Widget.AppCompat.AutoCompleteTextView"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="@dimen/activity_start_margin"
+			android:layout_marginEnd="@dimen/activity_end_margin"
+			android:background="@drawable/rectangle_pedittext"
+			android:drawableStart="@drawable/ic_icon_user"
+			android:drawablePadding="20dp"
+			android:fontFamily="@font/poppins_regular"
+			android:gravity="center_vertical"
+			android:hint="@string/profile_email_textview"
+			android:maxLength="45"
+			android:inputType="textEmailAddress"
+			android:paddingLeft="@dimen/activity_start_padding"
+			android:selectAllOnFocus="true"
+			android:textColorHint="#C0C0C0"
+			android:textSize="14sp"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintHorizontal_bias="1.0"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent"
+			app:layout_constraintVertical_bias="0.477" />
+		
+
+
+
+		<Spinner
+			android:id="@+id/et_address"
+			style="@style/SpinnerThemeEditProfile"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:paddingLeft="@dimen/_47sdp"
+			android:layout_marginStart="@dimen/activity_start_margin"
+			android:layout_marginTop="@dimen/activity_top_margin"
+			android:layout_marginEnd="@dimen/activity_end_margin"
+			android:focusable="false" />
+
+		
+
+		
+		
+		<EditText
+			android:id="@+id/et_phone_details"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="@dimen/activity_start_margin"
+			android:layout_marginTop="@dimen/activity_top_margin"
+			android:layout_marginEnd="@dimen/activity_end_margin"
+			android:background="@drawable/rectangle_pedittext"
+			android:drawableStart="@drawable/ic_phone"
+			android:drawablePadding="20dp"
+			android:fontFamily="@font/poppins_regular"
+			android:gravity="center_vertical"
+			android:hint="@string/edit_profile_phone_edittextview"
+			android:inputType="phone"
+			android:paddingLeft="@dimen/activity_start_padding"
+			android:selectAllOnFocus="true"
+			android:textColorHint="#C0C0C0"
+			android:textSize="14sp"
+			android:maxLength="10"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintHorizontal_bias="0.0"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent"
+			app:layout_constraintVertical_bias="0.681" />
+		
+		
+		
+		<EditText
+			android:id="@+id/et_date_of_birth"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="@dimen/activity_start_margin"
+			android:layout_marginTop="@dimen/activity_top_margin"
+			android:layout_marginEnd="@dimen/activity_end_margin"
+			android:background="@drawable/rectangle_pedittext"
+			android:drawableStart="@drawable/icon_calendar"
+			android:drawablePadding="20dp"
+			android:fontFamily="@font/poppins_regular"
+			android:gravity="center_vertical"
+			android:hint="@string/edit_profile_dob_edittextview"
+			android:inputType="date"
+			android:focusable="false"
+			android:paddingLeft="@dimen/activity_start_padding"
+			
+			android:textColorHint="#C0C0C0"
+			android:textSize="14sp"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintHorizontal_bias="0.0"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent"
+			app:layout_constraintVertical_bias="0.787" />
+		
+
+		<androidx.constraintlayout.widget.ConstraintLayout
+			android:layout_width="match_parent"
+			android:layout_height="85dp">
+			
+			
+			<ImageView
+				android:id="@+id/iv_save_information"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="65dp"
+				android:layout_marginEnd="65dp"
+				android:background="@drawable/rectangle_edit_profile"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintHorizontal_bias="0.0"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toTopOf="parent"
+				app:layout_constraintVertical_bias="0.64" />
+			
+			<TextView
+				android:id="@+id/tv_change_password"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="bottom"
+				android:fontFamily="@font/poppins_regular"
+				android:text="@string/edit_save_text_button"
+				android:textColor="#FFFFFF"
+				android:textSize="14sp"
+				app:layout_constraintBottom_toBottomOf="@+id/iv_save_information"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toTopOf="parent"
+				app:layout_constraintVertical_bias="0.79" />
+		
+		</androidx.constraintlayout.widget.ConstraintLayout>
+	</LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
+
+

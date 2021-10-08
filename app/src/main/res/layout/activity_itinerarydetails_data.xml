@@ -1,0 +1,174 @@
+<!--Layout to be loaded in the adapter named as ItineraryDetailsAdapter-->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/itineraryDetailsData"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="?android:windowBackground"
+	android:fitsSystemWindows="true">
+	
+	<androidx.core.widget.NestedScrollView
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+		<!--    android:overScrollMode="never"-->
+		
+		
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:orientation="vertical">
+			
+			<androidx.constraintlayout.widget.ConstraintLayout
+				android:layout_width="match_parent"
+				android:layout_height="@dimen/_500sdp">
+				
+				
+				<!-- Information details started-->
+				<TextView
+					android:id="@+id/tv_guideType"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginStart="@dimen/activity_start_margin"
+					android:layout_marginTop="@dimen/_20sdp"
+					android:layout_marginEnd="@dimen/activity_end_margin"
+					android:fontFamily="@font/poppins_regular"
+					android:gravity="start|center_vertical"
+					android:text="@string/text_guide_type"
+					android:textColor="@color/blackColor"
+					android:textSize="16sp"
+					app:layout_constraintBottom_toBottomOf="parent"
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintHorizontal_bias="0.004"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toTopOf="parent"
+					app:layout_constraintVertical_bias="0.734" />
+				
+				<TextView
+					android:id="@+id/tv_guide"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginStart="@dimen/activity_start_margin"
+					android:layout_marginTop="@dimen/_20sdp"
+					android:layout_marginEnd="@dimen/activity_end_margin"
+					android:fontFamily="@font/poppins_regular"
+					android:gravity="start|center_vertical"
+					android:text="@string/text_guide_name"
+					android:textColor="@color/blackColor"
+					android:textSize="16sp"
+					app:layout_constraintBottom_toBottomOf="parent"
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintHorizontal_bias="0.005"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toTopOf="parent"
+					app:layout_constraintVertical_bias="0.696" />
+				
+				<ImageView
+					android:id="@+id/imageView6"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="@dimen/_30sdp"
+					android:adjustViewBounds="true"
+					android:background="@drawable/rectangle_itinerarylist"
+					android:gravity="center_vertical"
+					android:scaleType="fitXY"
+					app:layout_constraintBottom_toBottomOf="parent"
+					app:layout_constraintStart_toEndOf="parent"
+					app:layout_constraintTop_toTopOf="parent"
+					app:layout_constraintVertical_bias="0.178" />
+				
+				<androidx.constraintlayout.widget.Barrier
+					android:id="@+id/barrier"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					app:barrierDirection="left" />
+				
+				
+				<TextView
+					android:id="@+id/tv_title_itinerary_duration"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginStart="@dimen/activity_start_margin"
+					android:layout_marginTop="@dimen/_20sdp"
+					android:layout_marginEnd="@dimen/activity_end_margin"
+					
+					android:fontFamily="@font/poppins_regular"
+					android:gravity="start|center_vertical"
+					android:text="@string/text_time_itinerary"
+					android:textColor="@color/blackColor"
+					android:textSize="16sp"
+					app:layout_constraintBottom_toBottomOf="parent"
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintHorizontal_bias="0.003"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toTopOf="parent"
+					app:layout_constraintVertical_bias="0.62" />
+				
+				<TextView
+					android:id="@+id/tv_title_itinerary_list3"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					
+					android:layout_marginTop="@dimen/_40sdp"
+					android:background="@null"
+					android:fontFamily="@font/poppins_regular"
+					android:gravity="start|center_vertical"
+					android:text="@string/text_itinerary_information"
+					android:textSize="@dimen/_11sdp"
+					app:layout_constraintBottom_toBottomOf="parent"
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintHorizontal_bias="0.303"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toTopOf="parent"
+					app:layout_constraintVertical_bias="0.032" />
+				
+				<TextView
+					android:id="@+id/tv_title_itinerary_list"
+					style="@style/font_title_day1"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="@dimen/_20sdp"
+					android:gravity="start|center_vertical"
+					android:text="@string/text_itinerary_details_day1"
+					
+					app:layout_constraintBottom_toBottomOf="parent"
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintHorizontal_bias="0.076"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toTopOf="parent"
+					app:layout_constraintVertical_bias="0.02" />
+				
+				<TextView
+					android:id="@+id/tv_travel_list"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginStart="@dimen/activity_start_margin"
+					android:layout_marginTop="@dimen/_20sdp"
+					android:layout_marginEnd="@dimen/activity_end_margin"
+					android:fontFamily="@font/poppins_regular"
+					android:gravity="start|center_vertical"
+					android:text="@string/text_itinerary_action"
+					android:textColor="@color/blackColor"
+					android:textSize="16sp"
+					app:layout_constraintBottom_toBottomOf="parent"
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintHorizontal_bias="0.0"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toTopOf="parent"
+					app:layout_constraintVertical_bias="0.658" />
+				
+				<!-- Information details Ended-->
+				
+				
+				<androidx.constraintlayout.widget.Barrier
+					android:id="@+id/barrier5"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					app:barrierDirection="left"
+					app:constraint_referenced_ids="tv_title_itinerary_list" />
+			
+			</androidx.constraintlayout.widget.ConstraintLayout>
+		
+		</LinearLayout>
+	</androidx.core.widget.NestedScrollView>
+</FrameLayout>

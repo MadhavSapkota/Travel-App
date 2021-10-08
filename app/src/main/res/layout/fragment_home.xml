@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:fillViewport="true">
+
+	<FrameLayout
+		android:id="@+id/homeFragment"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="?android:windowBackground"
+		android:fitsSystemWindows="true">
+
+		<androidx.constraintlayout.widget.ConstraintLayout
+			android:id="@+id/dashboard"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			tools:context=".activity.dashboard.DashboardActivity">
+
+
+			<!-- Background Image-->
+			<ImageView
+				android:id="@+id/backgroundImage"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:adjustViewBounds="true"
+				android:scaleType="centerCrop"
+				android:src="@drawable/login_background"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toTopOf="parent" />
+
+
+			<!-- Navogation bar-->
+
+
+			<ImageView
+				android:id="@+id/imageView7"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintHorizontal_bias="0.096"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toTopOf="parent"
+				app:layout_constraintVertical_bias="0.199"
+				app:srcCompat="@drawable/dashboard_rectangle1" />
+
+			<ImageView
+				android:id="@+id/imageView9"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintHorizontal_bias="0.456"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toTopOf="parent"
+				app:layout_constraintVertical_bias="0.199"
+				app:srcCompat="@drawable/dashboard_rectangle2" />
+
+
+			<ImageView
+				android:id="@+id/imageView10"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:background="@drawable/dashboard_rectangle3"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintHorizontal_bias="0.812"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toTopOf="parent"
+				app:layout_constraintVertical_bias="0.199" />
+
+			<ImageView
+				android:id="@+id/imageViewItinerary"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="@dimen/activity_start_margin"
+				android:src="@drawable/ic_itinerary"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintHorizontal_bias="0.429"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toTopOf="parent"
+				app:layout_constraintVertical_bias="0.213" />
+
+			<!--Booking Button-->
+
+			<!--Contact Button-->
+
+			<ImageView
+				android:id="@+id/imageViewBooking"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="@dimen/activity_start_margin"
+				android:src="@drawable/ic_booking"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintEnd_toStartOf="@+id/imageViewItinerary"
+				app:layout_constraintHorizontal_bias="0.229"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toTopOf="parent"
+				app:layout_constraintVertical_bias="0.213" />
+
+
+			<!--Username textView-->
+
+			<ImageView
+				android:id="@+id/imageView1Contact"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="@dimen/activity_start_margin"
+				android:layout_marginRight="@dimen/activity_end_margin"
+				android:adjustViewBounds="true"
+				android:background="@drawable/ic_contact"
+				android:scaleType="center"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintHorizontal_bias="0.83"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toTopOf="parent"
+				app:layout_constraintVertical_bias="0.215" />
+
+			<TextView
+				android:id="@+id/tVUsername"
+				style="@style/medium_large_font"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="@dimen/activity_start_margin"
+				android:gravity="center_vertical"
+				android:paddingBottom="20dp"
+				android:text="@string/dashboard_username"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintHorizontal_bias="0.023"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toTopOf="parent"
+				app:layout_constraintVertical_bias="0.091" />
+
+			<androidx.constraintlayout.widget.Guideline
+				android:id="@+id/guideline5"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:orientation="vertical"
+				app:layout_constraintGuide_begin="16dp" />
+
+			<!--TextView Welcome-->
+			<TextView
+				android:id="@+id/textViewWelcome"
+				style="@style/normal_font"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginBottom="@dimen/activity_bottom_margin"
+				android:text="@string/dashboard_welcome"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintHorizontal_bias="0.084"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toTopOf="parent"
+				app:layout_constraintVertical_bias="0.054" />
+
+			<!-- Location TextView-->
+			<TextView
+				android:id="@+id/textViewLocation"
+				style="@style/normal_font"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:gravity="start|center_vertical"
+				android:text="@string/dashboard_location"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintHorizontal_bias="0.886"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toTopOf="parent"
+				app:layout_constraintVertical_bias="0.052"
+				tools:ignore="MissingConstraints" />
+
+			<!--TextView temperature-->
+			<TextView
+				android:id="@+id/textViewTemperature"
+				style="@style/middle_large_font"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:gravity="end|center_vertical"
+				android:text="@string/dashboard_temperature"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintHorizontal_bias="0.862"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toTopOf="parent"
+				app:layout_constraintVertical_bias="0.081" />
+
+			<androidx.constraintlayout.widget.Barrier
+				android:id="@+id/barrier6"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				app:barrierDirection="top"
+				app:constraint_referenced_ids="textViewLocation" />
+
+			<!--ImageView cloud icon-->
+			<ImageView
+				android:id="@+id/imageViewCloud"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:src="@drawable/ic_weather"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintHorizontal_bias="0.722"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toTopOf="parent"
+				app:layout_constraintVertical_bias="0.052" />
+
+
+			<androidx.constraintlayout.widget.Barrier
+				android:id="@+id/barrier4"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				app:barrierDirection="top" />
+
+			<androidx.constraintlayout.widget.Guideline
+				android:id="@+id/guideline11"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal"
+				app:layout_constraintGuide_begin="640dp" />
+
+			<androidx.constraintlayout.widget.Barrier
+				android:id="@+id/barrier7"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				app:barrierDirection="top" />
+
+			<TextView
+				android:id="@+id/tvBooking"
+				style="@style/dashboard_font_button"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/dashboard_bookings"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintHorizontal_bias="0.117"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toTopOf="parent"
+				app:layout_constraintVertical_bias="0.31" />
+
+			<TextView
+				android:id="@+id/tvItinerary"
+				style="@style/dashboard_font_button"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/dashboard_itinerary"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintHorizontal_bias="0.45"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toTopOf="parent"
+				app:layout_constraintVertical_bias="0.31" />
+
+			<TextView
+				android:id="@+id/tvContact"
+				style="@style/dashboard_font_button"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/dashboard_contact"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintHorizontal_bias="0.824"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toTopOf="parent"
+				app:layout_constraintVertical_bias="0.31" />
+
+			<androidx.constraintlayout.widget.Guideline
+				android:id="@+id/guideline3"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal"
+				app:layout_constraintGuide_begin="20dp" />
+
+			<androidx.constraintlayout.widget.Barrier
+				android:id="@+id/barrier2"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				app:barrierDirection="top"
+				app:constraint_referenced_ids="tvItinerary" />
+
+			<RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="@dimen/_30sdp"
+				app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+				app:layout_constraintTop_toBottomOf="@+id/backgroundImage">
+
+				<TextView
+					android:id="@+id/textViewRctBooking"
+					style="@style/normal_medium_font"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginStart="@dimen/activity_start_margin"
+					android:layout_marginLeft="@dimen/activity_start_margin"
+					android:text="@string/dashboard_recent_booking" />
+
+				<TextView
+					android:id="@+id/textViewSeeAll"
+					style="@style/normal_font_see_all"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginStart="@dimen/_246sdp"
+					android:layout_marginTop="@dimen/_8sdp"
+					android:gravity="center_horizontal|center_vertical"
+					android:text="@string/dashboard_see_all"
+					android:textColor="@color/linkColor" />
+
+			</RelativeLayout>
+
+
+			<RelativeLayout
+				android:id="@+id/linearLayout"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				app:layout_constraintBottom_toBottomOf="parent">
+
+				<!--Recent Booking textView-->
+
+				<!--SEE ALL textView-->
+
+
+				<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+					android:id="@+id/swipeRefresh"
+					android:layout_width="wrap_content"
+					android:layout_height="@dimen/_285sdp">
+
+					<include
+						android:id="@+id/includes_dashboard_recyclerview"
+						layout="@layout/dashboard_recyclerview"
+						android:layout_width="wrap_content"
+						android:layout_height="match_parent" />
+
+
+				</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+			</RelativeLayout>
+
+			<androidx.constraintlayout.widget.Guideline
+				android:id="@+id/guideline4"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:orientation="vertical"
+				app:layout_constraintGuide_begin="20dp" />
+
+			<androidx.constraintlayout.widget.Barrier
+				android:id="@+id/barrier8"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				app:barrierDirection="left"
+				app:constraint_referenced_ids="textViewLocation" />
+
+			<androidx.constraintlayout.widget.Barrier
+				android:id="@+id/barrier9"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				app:barrierDirection="right"
+				app:constraint_referenced_ids="textViewLocation" />
+
+		</androidx.constraintlayout.widget.ConstraintLayout>
+	</FrameLayout>
+</ScrollView>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <layer-list>
+
+            <item android:drawable="@drawable/rectangle_pedittext" android:height= "@dimen/_40sdp" />
+            <item android:drawable="@drawable/ic_baseline_arrow_drop_down_24" android:gravity="center_vertical|right" android:right="5dp" />
+            <item android:drawable="@drawable/icon_address" android:gravity="center_vertical|left"  android:left="@dimen/_19sdp" android:top="1dp"/>
+        </layer-list>
+    </item>
+
+
+</selector>
+
+

@@ -1,0 +1,323 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/bookingDetailsData"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="?android:windowBackground"
+	android:fitsSystemWindows="true">
+	
+	<androidx.coordinatorlayout.widget.CoordinatorLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:overScrollMode="never">
+		
+		
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:orientation="vertical">
+			
+			
+			<com.google.android.material.appbar.AppBarLayout
+				android:id="@+id/app_bar"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:fitsSystemWindows="true"
+				tools:ignore="MissingConstraints">
+				
+				<com.google.android.material.appbar.CollapsingToolbarLayout
+					android:id="@+id/toolbar_layout"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					app:contentScrim="?attr/colorPrimary"
+					app:layout_scrollFlags="scroll|enterAlways"
+					tools:ignore="MissingConstraints">
+
+
+					<androidx.constraintlayout.widget.ConstraintLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content">
+
+						<Button
+							android:id="@+id/button_arrow"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_marginStart="@dimen/activity_start_margin"
+							android:layout_marginEnd="@dimen/activity_end_margin"
+							android:background="@null"
+							android:clickable="true"
+							android:drawableStart="@drawable/ic_arrow_booking_details"
+							android:gravity="start|center_vertical"
+							app:layout_constraintBottom_toBottomOf="parent"
+							app:layout_constraintEnd_toEndOf="parent"
+							app:layout_constraintHorizontal_bias="0.022"
+							app:layout_constraintStart_toStartOf="parent"
+							app:layout_constraintTop_toTopOf="parent"
+							app:layout_constraintVertical_bias="0.04" />
+
+
+						<ImageView
+							android:id="@+id/iv_rectangle_background"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:adjustViewBounds="true"
+							android:background="@drawable/booking_details_background"
+							android:contentDescription="@string/name_app"
+							android:scaleType="centerCrop"
+							app:layout_constraintBottom_toBottomOf="parent"
+							app:layout_constraintEnd_toEndOf="parent"
+							app:layout_constraintHorizontal_bias="0.333"
+							app:layout_constraintStart_toStartOf="parent"
+							app:layout_constraintTop_toTopOf="parent"
+							app:layout_constraintVertical_bias="0.0" />
+
+
+						<ImageView
+							android:id="@+id/iv_itinerary_details"
+							android:layout_width="160dp"
+							android:layout_height="40dp"
+							android:layout_marginStart="@dimen/activity_start_margin"
+							android:layout_marginEnd="@dimen/activity_end_margin"
+							android:layout_marginBottom="@dimen/activity_top_margin"
+							android:background="@drawable/itinerarybutton"
+							android:gravity="start|center_vertical"
+							app:layout_constraintBottom_toBottomOf="parent"
+							app:layout_constraintEnd_toEndOf="parent"
+							app:layout_constraintHorizontal_bias="0.0"
+							app:layout_constraintStart_toStartOf="parent"
+							app:layout_constraintTop_toTopOf="parent"
+							app:layout_constraintVertical_bias="0.928" />
+
+
+						<!--
+						<ImageView
+							android:id="@+id/iv_itinerary_details"
+							android:layout_width="@dimen/_140sdp"
+							android:layout_height="@dimen/_35sdp"
+							android:layout_marginStart="@dimen/activity_start_margin"
+							android:layout_marginEnd="@dimen/activity_end_margin"
+							android:layout_marginBottom="@dimen/activity_top_margin"
+							android:background="@drawable/submitbrightness"
+							android:gravity="start|center_vertical"
+							app:layout_constraintBottom_toBottomOf="parent"
+							app:layout_constraintEnd_toEndOf="parent"
+							app:layout_constraintHorizontal_bias="0.0"
+							app:layout_constraintStart_toStartOf="parent"
+							app:layout_constraintTop_toTopOf="parent"
+							app:layout_constraintVertical_bias="0.928" />-->
+
+
+						<TextView
+							android:id="@+id/tv_background_title"
+							style="@style/font_title_bookingdetails"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_marginStart="@dimen/_20ssp"
+							android:layout_marginEnd="@dimen/_20ssp"
+							android:layout_marginBottom="20dp"
+							android:gravity="start|center_vertical"
+							android:text="@string/text_trek_everest_name"
+							app:layout_constraintBottom_toBottomOf="parent"
+							app:layout_constraintEnd_toEndOf="parent"
+							app:layout_constraintHorizontal_bias="0.0"
+							app:layout_constraintStart_toStartOf="parent"
+							app:layout_constraintTop_toTopOf="parent"
+							app:layout_constraintVertical_bias="0.791" />
+
+						<androidx.constraintlayout.widget.Guideline
+							android:id="@+id/guideline7"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:orientation="vertical"
+							app:layout_constraintGuide_begin="20dp" />
+
+
+						<!-- ViewItinerary text View -->
+
+
+						<TextView
+							android:id="@+id/tvViewItinerary"
+							style="@style/font_view_itinerary"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_marginTop="@dimen/_2sdp"
+							android:fontFamily="@font/poppins_regular"
+							android:gravity="center_horizontal|center_vertical"
+							android:text="@string/text_view_itinerary"
+							app:layout_constraintBottom_toBottomOf="@+id/iv_itinerary_details"
+							app:layout_constraintEnd_toEndOf="@+id/iv_itinerary_details"
+							app:layout_constraintStart_toStartOf="@+id/iv_itinerary_details"
+							app:layout_constraintTop_toTopOf="@+id/iv_itinerary_details" />
+
+						<androidx.appcompat.widget.Toolbar
+							android:layout_width="?attr/actionBarSize"
+							android:layout_height="wrap_content"
+							app:layout_collapseMode="pin"
+							app:layout_scrollFlags="scroll|enterAlways"
+							app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+						<androidx.constraintlayout.widget.Barrier
+							android:id="@+id/barrier12"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							app:barrierDirection="left"
+							app:constraint_referenced_ids="button_arrow" />
+
+
+					</androidx.constraintlayout.widget.ConstraintLayout>
+				
+				
+				</com.google.android.material.appbar.CollapsingToolbarLayout>
+			</com.google.android.material.appbar.AppBarLayout>
+			
+			
+<!--			<TextView-->
+<!--				android:id="@+id/tv_booked_by"-->
+<!--				style="@style/font_view_booking_details_title"-->
+<!--				android:layout_width="match_parent"-->
+<!--				android:layout_height="wrap_content"-->
+<!--				android:layout_marginStart="@dimen/_20ssp"-->
+<!--				android:layout_marginTop="@dimen/_30sdp"-->
+<!--				android:layout_marginEnd="@dimen/_20ssp"-->
+<!--				android:gravity="center_vertical"-->
+<!--				android:text="@string/text_booked_by" />-->
+
+			<androidx.constraintlayout.widget.ConstraintLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="@dimen/_20ssp">
+
+				<TextView
+					android:id="@+id/tv_booked_by"
+					style="@style/font_view_booking_details_title"
+					android:layout_width="97dp"
+					android:layout_height="34dp"
+					android:layout_marginEnd="@dimen/_20sdp"
+					android:gravity="center_vertical|bottom"
+					android:text="@string/text_booked_by"
+					app:layout_constraintBottom_toBottomOf="parent"
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintHorizontal_bias="0.0"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toTopOf="parent"
+					app:layout_constraintVertical_bias="0.2" />
+
+				<TextView
+					android:id="@+id/tv_person_name"
+					style="@style/font_view_booking_details_subtitle"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginEnd="@dimen/_20sdp"
+					android:fontFamily="@font/poppins_regular"
+					android:gravity="center_vertical"
+					android:text="@string/booked_person_name"
+					app:layout_constraintBottom_toBottomOf="parent"
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintHorizontal_bias="0.0"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toTopOf="parent"
+					app:layout_constraintVertical_bias="0.8" />
+
+
+				<ImageView
+					android:id="@+id/iv_itinerary_y"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="@dimen/_20sdp"
+					android:background="@drawable/ellipse_contact"
+					app:layout_constraintBottom_toBottomOf="parent"
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintHorizontal_bias="0.919"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toTopOf="parent"
+					app:layout_constraintVertical_bias="0.0" />
+
+				<ImageView
+					android:id="@+id/iv_itinerary_yy"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:background="@drawable/icon_contact_eclipse"
+					app:layout_constraintBottom_toBottomOf="@+id/iv_itinerary_y"
+					app:layout_constraintEnd_toEndOf="@+id/iv_itinerary_y"
+					app:layout_constraintStart_toStartOf="@+id/iv_itinerary_y"
+					app:layout_constraintTop_toTopOf="@+id/iv_itinerary_y" />
+
+
+			</androidx.constraintlayout.widget.ConstraintLayout>
+
+			<TextView
+				android:id="@+id/tv_text_guest_number"
+				style="@style/font_view_booking_details_title"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="@dimen/_20sdp"
+				android:layout_marginEnd="@dimen/_20sdp"
+				android:gravity="center_vertical"
+				android:text="@string/text_guest_number" />
+			
+			<TextView
+				android:id="@+id/tv_number_guest_booked"
+				style="@style/font_view_booking_details_subtitle"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="@dimen/_20sdp"
+				android:layout_marginEnd="@dimen/_20sdp"
+				android:layout_marginBottom="10dp"
+				android:fontFamily="@font/poppins_regular"
+				android:gravity="center_vertical"
+				android:text="@string/number_guest_booked" />
+			
+			<TextView
+				android:id="@+id/tv_text_tour_date"
+				style="@style/font_view_booking_details_title"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="@dimen/_20sdp"
+				android:layout_marginEnd="@dimen/_20sdp"
+				android:fontFamily="@font/poppins_regular"
+				android:gravity="center_vertical"
+				android:text="@string/text_tour_date" />
+			
+			<TextView
+				android:id="@+id/tv_date_tour_booking"
+				style="@style/font_view_booking_details_subtitle"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="@dimen/_20sdp"
+				android:layout_marginEnd="@dimen/_20sdp"
+				android:layout_marginBottom="10dp"
+				android:drawablePadding="@dimen/_20ssp"
+				android:gravity="center_vertical"
+				android:text="@string/date_tour_booked" />
+			
+			<TextView
+				android:id="@+id/tv_text_duration"
+				style="@style/font_view_booking_details_title"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="@dimen/_20sdp"
+				android:layout_marginEnd="@dimen/_20sdp"
+				android:fontFamily="@font/poppins_regular"
+				android:gravity="center_vertical"
+				android:text="@string/text_duration"
+				android:textSize="14sp" />
+			
+			<TextView
+				android:id="@+id/tv_duration_travel"
+				style="@style/font_view_booking_details_subtitle"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="@dimen/_20sdp"
+				android:layout_marginEnd="@dimen/_20sdp"
+				android:drawablePadding="@dimen/_20ssp"
+				android:fontFamily="@font/poppins_regular"
+				android:gravity="center_vertical"
+				android:text="@string/duration_of_days" />
+
+
+		</LinearLayout>
+	</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+</FrameLayout>
